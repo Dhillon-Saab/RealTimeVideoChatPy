@@ -1,5 +1,22 @@
-{% extends 'base/main.html' %}
+{% extends 'base/main.html' %} {% load static %} {% block content %}
 
-{% block content %}
-<h2>Lobby</h2>
+<main>
+  <section id="form-container">
+    <img id="logo" src="{% static 'images/logo.png' %}" />
+
+    <div>
+      <h1>Welcome to Video Chat</h1>
+      <p>A group video calling application for anyone who ends up here.</p>
+    </div>
+
+    <form id="form">
+      <div class="form-field">
+        <input id="submitButton" type="submit" value="Join Stream" />
+      </div>
+    </form>
+  </section>
+</main>
+
+<script type="text/javascript" src="{% static 'js/lobbyForm.js' %}"></script>
+
 {% endblock content %}
